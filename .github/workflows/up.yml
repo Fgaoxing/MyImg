@@ -12,6 +12,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 18.x
+          registry-url: https://registry.npmjs.org/
       - name: Install & Build
         run: npm i&&node main.js
       - run: npm publish
