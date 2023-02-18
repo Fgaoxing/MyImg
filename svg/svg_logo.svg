@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <foreignObject width="100%" height="100%">
+        <body xmlns="http://www.w3.org/1999/xhtml">
+            <style>
+                body {
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    margin: 0;
+                }
+                p {
+                    font-size: 25vw;
+                    margin: 0;
+                    margin-bottom: .2em !important;
+                    text-align: center;
+                    font-style: italic;
+                    font-weight: bold;
+                }
+            </style>
+            <div style="background: #fff;border-radius: 100%">
+                <div style="padding: 10%;">
+                    <p>初二</p>
+                    <p>少年</p>
+                </div>
+            </div>
+        </body>
+    </foreignObject>
+    <title>logo</title>
+</svg>
