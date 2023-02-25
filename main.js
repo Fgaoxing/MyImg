@@ -10,6 +10,7 @@ fetch('https://registry.npmmirror.com/ytblogimg/').then(function (res) {
                 v++;
                 let file = JSON.parse(fs.readFileSync('./package.json'))
                 file['version'] = v.toString().split('').join('.');
+                console.log(file['version'])
                 fs.writeFileSync('./package.json', JSON.stringify(file, '', '\t'))
             }
         }
