@@ -1,6 +1,6 @@
 {
 	"name": "ytblogimg",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"description": "博客图床",
 	"main": "main.js",
 	"author": "Fgaoxing",
