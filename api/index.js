@@ -28,4 +28,4 @@ ss.http({
             res.end(`<html lang="zh-cn"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><title>500 发生错误 - 图床</title><link rel="shortcut icon" href="/webp/logo.webp"><link rel="stylesheet" href="https://jsd.onmicrosoft.cn/gh/Hexo-theme-Jian/static/css/grid.css"></head><body><div class="card center" style="width: calc(100% - 32px);display: flex;justify-content: center;max-width: 300px;flex-direction: column;align-items: center;"><h1 style="font-size: 50px;margin: 15px;">500</h1><span style="margin: 25px;">发生错误: ${err}</span></div></body></html>`);
         })
     }
-}).listen(3000)
+})。listen(3000)
