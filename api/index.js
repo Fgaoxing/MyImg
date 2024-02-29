@@ -1,13 +1,14 @@
 import fetch from "node-fetch";
 import ss from "simplest-server";
 import fs from "fs";
+import path from "path";
 
 ss.http({
     ":(.*)": function (req, res) {
+        console.log(`.${decodeURIComponent(req.url.pathname)}`, process.cwd());
         if (fs.existsSync(`.${decodeURIComponent(req.url.pathname)}`)) {
             fetch('https://registry.npmmirror.com/ytblogimg/').then(data => data.json()).then(function (json) {
                 if ('dist-tags' in json) {
-                    console.log(json['dist-tags']['latest'], `..${decodeURIComponent(req.url.pathname)}`);
                     res.writeHead(301, {
                         "Content-Type": "text/html",
                         "Location": `https://registry.npmmirror.com/ytblogimg/${json['dist-tags']['latest']}/files${req.url.pathname}`,
