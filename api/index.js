@@ -4,7 +4,7 @@ import fs from "fs";
 
 ss.http({
     ":(.*)": function (req, res) {
-        if (fs.existsSync(`..${decodeURIComponent(req.url.pathname)}`)) {
+        if (fs.existsSync(`.${decodeURIComponent(req.url.pathname)}`)) {
             fetch('https://registry.npmmirror.com/ytblogimg/').then(data => data.json()).then(function (json) {
                 if ('dist-tags' in json) {
                     console.log(json['dist-tags']['latest'], `..${decodeURIComponent(req.url.pathname)}`);
