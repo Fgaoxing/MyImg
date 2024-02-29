@@ -1,25 +1,18 @@
 {
-  "headers": [
+  "name": "comment",
+  "github": {
+    "silent": true
+  },
+  "builds": [
     {
-      "source": "/webp",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, s-maxage=604800, max-age=604800"
-        }
-      ]
-    },
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
     {
-      "source": "(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, s-maxage=3153600000, max-age=3153600000"
-        }, {
-          "key": "Vercel-CDN-Cache-Control",
-          "value": "max-age=3153600000"
-        }
-      ]
+      "src": "/(.*)",
+      "dest": "index.js"
     }
   ]
 }
