@@ -1,11 +1,11 @@
 {
   "headers": [
     {
-      "source": "/sw.js",
+      "source": "/webp",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
+          "value": "public, s-maxage=604800, max-age=604800"
         }
       ]
     },
@@ -14,7 +14,7 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, s-maxage=604800, max-age=604800"
+          "value": "public, s-maxage=3153600000, max-age=3153600000"
         }, {
           "key": "Vercel-CDN-Cache-Control",
           "value": "max-age=3153600000"
