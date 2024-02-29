@@ -7,6 +7,7 @@
 	"license": "MIT",
 	"type": "module",
 	"dependencies": {
-		"node-fetch": "^3.3.0"
+		"node-fetch": "^3.3.0",
+		"simplest-server": "^2.0.0"
 	}
 }
