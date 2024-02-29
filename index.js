@@ -1,11 +1,10 @@
 import fetch from "node-fetch";
 import ss from "simplest-server";
 import fs from "fs";
-import path from "path";
 
 ss.http({
     ":(.*)": function (req, res) {
-        console.log(`.${decodeURIComponent(req.url.pathname)}`, process.cwd());
+        console.log(`.${decodeURIComponent(req.url.pathname)}`);
         if (fs.existsSync(`.${decodeURIComponent(req.url.pathname)}`)) {
             fetch('https://registry.npmmirror.com/ytblogimg/').then(data => data.json()).then(function (json) {
                 if ('dist-tags' in json) {
