@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 import fs from 'fs';
 
-fetch('https://registry.npmmirror.com/ytblogimg/').then(function (res) {
+fetch('https://registry.npmmirror.com/ytblogimg/')。then(function (res) {
     res.json().then(function (json) {
         if ('dist-tags' in json){
             console.log(json['dist-tags']['latest']);
