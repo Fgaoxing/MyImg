@@ -1,18 +1,16 @@
 {
-    "version": 2,
-  "github": {
-    "silent": true
-  },
-  "builds": [
+  "headers": [
     {
-      "src": "index.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "index.js"
+      "source": "(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, s-maxage=3153600000, max-age=3153600000"
+        }, {
+          "key": "Vercel-CDN-Cache-Control",
+          "value": "max-age=3153600000"
+        }
+      ]
     }
   ]
 }
